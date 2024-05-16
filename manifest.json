@@ -1,0 +1,21 @@
+{
+    "name": "Image Grabber",
+    "author": "Mamont",
+    "description": "Extract all images from current web page",
+    "version": "1.1",
+    "manifest_version": 3,
+    "content_scripts": [ {
+        "all_frames": true,
+        "js": [ "alert.js" ],
+        "matches": [ "\u003Call_urls>" ],
+        "run_at": "document_start"
+    } ],
+    "icons": {
+        "32":"./32.png"
+    },
+    "action": {
+        "default_popup":"popup.html"
+    },
+    "permissions": ["scripting", "activeTab"],
+    "background":{}
+}
